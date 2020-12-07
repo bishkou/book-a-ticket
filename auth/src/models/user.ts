@@ -39,6 +39,7 @@ userSchema.pre('save', async function(done) {
   }
   // @ts-ignore
   done();
+
 });
 
 userSchema.statics.build = (attrs: UserAttrs) => {
