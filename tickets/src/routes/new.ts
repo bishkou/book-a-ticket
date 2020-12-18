@@ -25,7 +25,6 @@ router.post('/api/tickets', requireAuth,[
     })
 
     await ticket.save();
-
     res.status(201).send(ticket);
 })
 
