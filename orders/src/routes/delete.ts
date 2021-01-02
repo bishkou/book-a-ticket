@@ -27,7 +27,7 @@ router.delete('/api/orders/:orderId', requireAuth,
             ticket: {
                 id: order.ticket.id!,
             },
-            version: 0,
+            version: order.version,
 
 
         })
