@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ts-node-dev --poll src/index.ts",
     "test": "jest --watchAll --no-cache",
-    "test:ci": "jest"
+    "test:ci": "jest --ci --reporters='default' --reporters='./github-actions-reporter'"
   },
   "jest": {
     "preset": "ts-jest",
