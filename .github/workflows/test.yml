@@ -12,9 +12,9 @@ jobs:
   Jest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Run Tests
         run: |
           cd auth
           npm install 
-          npm test
+          npm run test:ci
