@@ -14,6 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run Tests
-      - run: cd auth
-      - run: npm install
-      - run: npm run test:ci
+        run: cd auth
+      - name: installing dep
+        run: npm install
+      - name: runing test
+        run: npm run test:ci
