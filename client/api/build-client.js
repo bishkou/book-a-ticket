@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default function myfunction ({ req }) {
+export default function MyPage ({ req }) {
   if (typeof window === 'undefined') {
     // We are on the server
 
