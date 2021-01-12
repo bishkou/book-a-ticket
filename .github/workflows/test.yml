@@ -4,15 +4,23 @@ name: tests
 
 # Controls when the action will run. 
 on:
-  pull_request
+  pull_request:
+    branches: 
+      - dev
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   Jest:
+    name: Running tests
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: Run Tests
         run: cd auth
       - name: installing dep
