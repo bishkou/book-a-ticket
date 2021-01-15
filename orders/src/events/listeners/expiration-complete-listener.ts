@@ -27,7 +27,6 @@ export class ExpirationCompleteListener extends Listener<
       return msg.ack();
     }
 
-
     order.set({
       status: OrderStatus.Cancelled,
     });
