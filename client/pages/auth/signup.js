@@ -17,6 +17,7 @@ export default function MyPage5 () {
 
   const onSubmit = async event => {
     event.preventDefault();
+
     await doRequest();
   };
 
