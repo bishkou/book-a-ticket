@@ -21,6 +21,7 @@ router.post(
     const { title, price } = req.body;
 
     const ticket = Ticket.build({
+
       title,
       price,
       userId: req.currentUser!.id,
